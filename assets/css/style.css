@@ -1,8 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');
 :root {
   --primary-color: #fafafa;
-  --gray-color: #3c3c3c;
+  --gray-color: rgb(92, 92, 97);
+  --dark-gray-color: rgb(131, 132, 132);
   --light-color: #1e1e1e;
+  --orange-color: rgb(243, 162, 60);
 }
 
 * {
@@ -30,25 +32,23 @@
 .card{
   display: flex;
   flex-direction: column;
-  width: 30%;
+  width: 25%;
   text-align: center;
-  line-height: 1.5em;
-  padding: 30px 20px;
-  background: #fff;
-  border-radius: 10px;
+  background: var(--gray-color);
+  border-radius: 5px;
   box-shadow: 0px 0px 5px 3px #0a0a0a40;
 }
 
  input {
   display: flex;
   width: 100%;
-  margin-top: 10px;
-  padding: 10px 15px;
+  padding: 30px 40px;
   border-radius: 3px;
   box-shadow: 0px 0px 5px 3px #0a0a0a20;
   border: none;
-  margin-bottom: 10px;
-  font-size: 1.3rem;
+  font-size: 1.8rem;
+  background-color: var(--gray-color);
+  color: var(--primary-color);
 }
 
 
@@ -59,7 +59,7 @@
 h1{
   font-size: 2.5rem;
   margin-bottom: 30px;
-  color: var(--gray-color);
+  color: var(--primary-color);
 }
 
 p{
@@ -70,15 +70,14 @@ p{
   outline: none;
   border: 0;
   color: #fff;
-  background-color: var(--gray-color);
+  background-color: var(--dark-gray-color);
   font-weight: 400;
   font-size: 1.2rem;
-  padding: 6px 20px;
+  padding: 15px 15px;
   border-radius: 3px;
   box-shadow: 0px 0px 3px 1px #0a0a0a20;
   transition: 0.3s linear all;
   width: 100%;
-  margin-top: 10px;
 }
 
 
@@ -86,19 +85,37 @@ p{
 .btn:hover {
   cursor: pointer;
   box-shadow: 0px 0px 5px 3px #0a0a0a40;
-  filter: brightness(1.8);
+  filter: brightness(1.1);
 }
 
-@media screen and (max-width: 849px) {
+.orange{
+  background: var(--orange-color);
+}
+
+.orange-div{
+  background: var(--orange-color);
+  font-size: 1.5rem;
+}
+
+.dif{
+  background: var(--gray-color);
+  font-size: 1.4rem;
+}
+
+@media screen and (max-width: 1249px) {
   .card{
-    padding: 40px 20px;
-    width: 60%;
+    width: auto;
   }
 }
 
-@media screen and (max-width: 499px) {
+@media screen and (max-width: 599px) {
   .card{
-    padding: 40px 20px;
+    width: auto;
+  }
+}
+
+@media screen and (max-width: 399px) {
+  .card{
     width: 80%;
   }
 }
